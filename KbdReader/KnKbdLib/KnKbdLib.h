@@ -1,0 +1,60 @@
+#pragma once
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// author	: kernullist.gloryo
+// date		: 2007.02.11
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+extern "C"
+{
+#include <ntddk.h>
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+typedef struct _KNKBD_READDATA
+{
+	PDEVICE_OBJECT	pDeviceObject;
+	ULONG			sessionId;
+
+	USHORT			unitId;
+	USHORT			makeCode;
+	USHORT			flags;
+	ULONG			extraInformation;
+
+} KNKBD_READDATA, *PKNKBD_READDATA;
+
+
+typedef void (NTAPI *FN_KNKBD_READCOMPLETION)(
+	IN	PKNKBD_READDATA			pKnKbdInputData,
+	IN	PVOID					pContext
+	);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+BOOLEAN
+NTAPI
+InitializeKnKbdLib(
+	void
+	);
+
+void
+NTAPI
+FinalizeKnKbdLib(
+	void
+	);
+
+BOOLEAN
+NTAPI
+KnKbdStartRead(
+	IN	FN_KNKBD_READCOMPLETION	pfnCallback,
+	IN	PVOID					pCallbackContext
+	);
+
+void
+NTAPI
+KnKbdStopRead(
+	void
+	);
