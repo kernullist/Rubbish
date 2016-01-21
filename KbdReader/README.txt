@@ -1,28 +1,30 @@
-[°³¹ß È¯°æ]
+[ê°œë°œ í™˜ê²½]
 
 Visusl Studio 2015
 WDK 7600.16385.1
 
 
-[Å×½ºÆ® ¹æ¹ý]
+[í…ŒìŠ¤íŠ¸ ë°©ë²•]
 
-1. ¼Ò½º ÄÚµå ºôµå
+1. ì†ŒìŠ¤ ì½”ë“œ ë¹Œë“œ
 
-2. Å×½ºÆ® ´ë»ó ½Ã½ºÅÛÀÇ ÇÃ·§Æû°ú ÀÏÄ¡ÇÏ´Â ´ÙÀ½ ÆÄÀÏµéÀ» Å×½ºÆ® ½Ã½ºÅÛÀÇ µ¿ÀÏ Æú´õ¿¡ À§Ä¡½ÃÅ´
+2. í…ŒìŠ¤íŠ¸ ëŒ€ìƒ ì‹œìŠ¤í…œì˜ í”Œëž«í¼ê³¼ ì¼ì¹˜í•˜ëŠ” ë‹¤ìŒ íŒŒì¼ë“¤ì„ í…ŒìŠ¤íŠ¸ ì‹œìŠ¤í…œì˜ ë™ì¼ í´ë”ì— ìœ„ì¹˜ì‹œí‚´
  - KbdReader.exe 
  - KbdRdr.sys
  - KnCommLibUser.dll
  - install.bat
  - uninstall.bat
 
-3. install.bat °ü¸®ÀÚ ±ÇÇÑÀ¸·Î ½ÇÇà
+3. install.bat ê´€ë¦¬ìž ê¶Œí•œìœ¼ë¡œ ì‹¤í–‰
 
-4. KbdReader.exe ½ÇÇà
+4. KbdReader.exe ì‹¤í–‰
 
-5. Start ¹öÆ° Å¬¸¯
+5. Start ë²„íŠ¼ í´ë¦­
 
-6. Stop ¹öÆ° Å¬¸¯
+6. Stop ë²„íŠ¼ í´ë¦­
 
-7. KbdReader.exe Á¾·á
+7. KbdReader.exe ì¢…ë£Œ
 
-8. uninstall.bat °ü¸®ÀÚ ±ÇÇÑÀ¸·Î ½ÇÇà
+8.ì•„ë¬´í‚¤ë‚˜ í•œë²ˆ ëˆŒëŸ¬ì£¼ê¸°~
+
+9. uninstall.bat ê´€ë¦¬ìž ê¶Œí•œìœ¼ë¡œ ì‹¤í–‰
