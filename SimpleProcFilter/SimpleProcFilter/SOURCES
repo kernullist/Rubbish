@@ -1,0 +1,27 @@
+TARGETNAME=SimpleProcFilter
+TARGETTYPE=DRIVER
+
+C_DEFINES=$(C_DEFINES)
+LINKER_FLAGS=$(LINKER_FLAGS) /INTEGRITYCHECK
+
+MSC_WARNING_LEVEL=/W3
+
+!if "$(AMD64)" == "1"
+TARGETLIBS= $(DDK_LIB_PATH)\ntstrsafe.lib \
+		$(DDK_LIB_PATH)\rtlver.lib \
+		$(DDK_LIB_PATH)\wdm.lib \
+		..\KnCommLib\amd64\KnCommLib.lib
+!else
+TARGETLIBS= $(DDK_LIB_PATH)\ntstrsafe.lib \
+		$(DDK_LIB_PATH)\rtlver.lib \
+		$(DDK_LIB_PATH)\wdm.lib \
+		..\KnCommLib\i386\KnCommLib.lib
+!endif
+
+!if "$(DDKBUILDENV)" == "checked" | "$(DDKBUILDENV)" == "chk"
+TARGETPATH=..\Debug
+!else if "$(DDKBUILDENV)" == "free" | "$(DDKBUILDENV)" == "fre"
+TARGETPATH=..\Release
+!endif
+
+SOURCES=SimpleProcFilter.cpp
